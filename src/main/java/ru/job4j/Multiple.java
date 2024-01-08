@@ -10,6 +10,7 @@ public class Multiple {
         System.out.println("1 * 7 = 7");
         System.out.println("1 * 8 = 8");
         System.out.println("1 * 8 = 9");
+
     }
 
 }

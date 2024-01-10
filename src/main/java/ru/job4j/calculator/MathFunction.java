@@ -11,6 +11,22 @@ public class MathFunction {
         return y;
     }
 
+    public static double multiply(double first, double second) {
+        return first * second;
+    }
+
+    public static double sum(double first, double second) {
+        return first + second;
+    }
+
+    public static double division(double first, double second) {
+        return first / second;
+    }
+
+    public static double difference(double first, double second) {
+        return first - second;
+    }
+
     public static void main(String[] args) {
         int result1 = MathFunction.func1(3);
         int result2 = MathFunction.func2(5);

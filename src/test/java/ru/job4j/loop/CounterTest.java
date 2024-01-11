@@ -1,6 +1,8 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CounterTest {
@@ -20,5 +22,29 @@ class CounterTest {
     @Test
     public void testSumWhenStartEqualsFinish() {
         assertEquals(1, Counter.sum(1, 1));
+    }
+
+    @Test
+    void sumByEvenWithNegativeStart() {
+        int result = Counter.sumByEven(-5, 6);
+        assertThat(result).isEqualTo(6);
+    }
+
+    @Test
+    void sumByEvenWhenStartEqualsFinish() {
+        int result = Counter.sumByEven(5, 5);
+        assertThat(result).isEqualTo(0);
+    }
+
+    @Test
+    void sumByEvenInRange() {
+        int result = Counter.sumByEven(0, 10);
+        assertThat(result).isEqualTo(30);
+    }
+
+    @Test
+    void sumByEvenWhenStartGreaterThanFinish() {
+        int result = Counter.sumByEven(10, 0);
+        assertThat(result).isEqualTo(0);
     }
 }

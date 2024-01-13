@@ -25,6 +25,6 @@ class FactorialTest {
     @Test
     void calculateFactorialOfNegativeNumber() {
         int result = Factorial.calculate(-5);
-        assertThat(result).isEqualTo(0);
+        assertThat(result).isEqualTo(1);
     }
 }

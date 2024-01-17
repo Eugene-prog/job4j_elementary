@@ -34,11 +34,21 @@ class PointTest {
     }
 
     @Test
-    void whenminus1ninus2to11then3dot6() {
-        double expected = 3.6;
-        Point a = new Point(-1, -2);
-        Point b = new Point(1, 1);
-        double output = a.distance(b);
+    void whenminus1ninus2minus2to111then4dot69() {
+        double expected = 4.69;
+        Point a = new Point(-1, -2, -2);
+        Point b = new Point(1, 1, 1);
+        double output = a.distance3d(b);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
+
+    @Test
+    void when122to111then4dot69() {
+        double expected = 1.41;
+        Point a = new Point(1, 2, 2);
+        Point b = new Point(1, 1, 1);
+        double output = a.distance3d(b);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+
 }

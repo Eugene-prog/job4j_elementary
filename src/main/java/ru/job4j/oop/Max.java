@@ -6,7 +6,6 @@ public class Max {
     }
 
     public int max(int one, int two, int three) {
-        //return one > three ? one > two ? one : two : three > two ? three : two;
         return max(one, two) > three ? max(one, two) : three;
     }
 

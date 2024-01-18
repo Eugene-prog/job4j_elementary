@@ -43,7 +43,7 @@ class PointTest {
     }
 
     @Test
-    void when122to111then4dot69() {
+    void when122to111then1dot41() {
         double expected = 1.41;
         Point a = new Point(1, 2, 2);
         Point b = new Point(1, 1, 1);

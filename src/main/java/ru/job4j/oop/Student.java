@@ -18,4 +18,5 @@ public class Student {
         petya.sing();
         petya.sing();
     }
+
 }

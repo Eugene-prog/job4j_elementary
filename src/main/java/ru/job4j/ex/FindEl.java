@@ -7,7 +7,7 @@ public class FindEl {
                 return i;
             }
         }
-        throw new ElementNotFoundException();
+        throw new ElementNotFoundException("Элемент не найден в массиве");
     }
 
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class FindEl {
         try {
             indexOf(names, searchName);
         } catch (ElementNotFoundException e) {
-            System.out.println("Элемент не найден в массиве");
+            System.out.println(e.getMessage());
         }
 
     }
